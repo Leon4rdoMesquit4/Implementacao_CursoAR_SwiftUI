@@ -11,6 +11,25 @@
 		E809D7502C49885100DE8367 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E809D74F2C49885100DE8367 /* ContentView.swift */; };
 		E809D7522C49885300DE8367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E809D7512C49885300DE8367 /* Assets.xcassets */; };
 		E809D7552C49885300DE8367 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E809D7542C49885300DE8367 /* Preview Assets.xcassets */; };
+		E85C12772C499FC800686372 /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E85C12762C499FC800686372 /* fender_stratocaster.usdz */; };
+		E85C127E2C49B3F000686372 /* LoadModelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C127D2C49B3F000686372 /* LoadModelsView.swift */; };
+		E85C12802C4ADCEE00686372 /* OcclusionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C127F2C4ADCEE00686372 /* OcclusionView.swift */; };
+		E85C12822C4ADD8B00686372 /* IMG_2497.MOV in Resources */ = {isa = PBXBuildFile; fileRef = E85C12812C4ADD8B00686372 /* IMG_2497.MOV */; };
+		E85C12842C4B024700686372 /* JairoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C12832C4B024700686372 /* JairoView.swift */; };
+		E85C128C2C4C2A4700686372 /* TextureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C128B2C4C2A4700686372 /* TextureView.swift */; };
+		E85C128E2C4DFA4400686372 /* GravityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C128D2C4DFA4400686372 /* GravityView.swift */; };
+		E85C12902C4E024700686372 /* CollisionColorChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C128F2C4E024700686372 /* CollisionColorChangeView.swift */; };
+		E85C12922C4EE2B600686372 /* CollisionSystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C12912C4EE2B600686372 /* CollisionSystemView.swift */; };
+		E85C12942C4EECE300686372 /* CoachingImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C12932C4EECE300686372 /* CoachingImplementation.swift */; };
+		E85C12962C4EEE7500686372 /* MeasureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C12952C4EEE7500686372 /* MeasureCoordinator.swift */; };
+		E85C12992C4EF51A00686372 /* MeasureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C12982C4EF51A00686372 /* MeasureView.swift */; };
+		E85C129B2C4EFF0E00686372 /* 0a72ab1b-afcf-442b-9d35-d95c18dc8099.mov in Resources */ = {isa = PBXBuildFile; fileRef = E85C129A2C4EFF0E00686372 /* 0a72ab1b-afcf-442b-9d35-d95c18dc8099.mov */; };
+		E85C129D2C4F177D00686372 /* LucasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C129C2C4F177D00686372 /* LucasView.swift */; };
+		E87ECA072C49920100361DB8 /* FirstShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ECA062C49920100361DB8 /* FirstShapes.swift */; };
+		E87ECA0A2C49957700361DB8 /* ChangeBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ECA092C49957700361DB8 /* ChangeBoxColor.swift */; };
+		E87ECA0C2C49992200361DB8 /* CreateABoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ECA0B2C49992200361DB8 /* CreateABoxView.swift */; };
+		E87ECA0E2C499BA100361DB8 /* ChangeObjectStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87ECA0D2C499BA100361DB8 /* ChangeObjectStateView.swift */; };
+		E87ECA102C499C5400361DB8 /* gramophone.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E87ECA0F2C499C5400361DB8 /* gramophone.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +38,27 @@
 		E809D74F2C49885100DE8367 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E809D7512C49885300DE8367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E809D7542C49885300DE8367 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E85C12762C499FC800686372 /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fender_stratocaster.usdz; sourceTree = "<group>"; };
+		E85C127B2C49B02400686372 /* LunarRover_English.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = LunarRover_English.reality; sourceTree = "<group>"; };
+		E85C127C2C49B1ED00686372 /* hab.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = hab.reality; sourceTree = "<group>"; };
+		E85C127D2C49B3F000686372 /* LoadModelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadModelsView.swift; sourceTree = "<group>"; };
+		E85C127F2C4ADCEE00686372 /* OcclusionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcclusionView.swift; sourceTree = "<group>"; };
+		E85C12812C4ADD8B00686372 /* IMG_2497.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = IMG_2497.MOV; sourceTree = "<group>"; };
+		E85C12832C4B024700686372 /* JairoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JairoView.swift; sourceTree = "<group>"; };
+		E85C128B2C4C2A4700686372 /* TextureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureView.swift; sourceTree = "<group>"; };
+		E85C128D2C4DFA4400686372 /* GravityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityView.swift; sourceTree = "<group>"; };
+		E85C128F2C4E024700686372 /* CollisionColorChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionColorChangeView.swift; sourceTree = "<group>"; };
+		E85C12912C4EE2B600686372 /* CollisionSystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionSystemView.swift; sourceTree = "<group>"; };
+		E85C12932C4EECE300686372 /* CoachingImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachingImplementation.swift; sourceTree = "<group>"; };
+		E85C12952C4EEE7500686372 /* MeasureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureCoordinator.swift; sourceTree = "<group>"; };
+		E85C12982C4EF51A00686372 /* MeasureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureView.swift; sourceTree = "<group>"; };
+		E85C129A2C4EFF0E00686372 /* 0a72ab1b-afcf-442b-9d35-d95c18dc8099.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "0a72ab1b-afcf-442b-9d35-d95c18dc8099.mov"; sourceTree = "<group>"; };
+		E85C129C2C4F177D00686372 /* LucasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LucasView.swift; sourceTree = "<group>"; };
+		E87ECA062C49920100361DB8 /* FirstShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstShapes.swift; sourceTree = "<group>"; };
+		E87ECA092C49957700361DB8 /* ChangeBoxColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeBoxColor.swift; sourceTree = "<group>"; };
+		E87ECA0B2C49992200361DB8 /* CreateABoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateABoxView.swift; sourceTree = "<group>"; };
+		E87ECA0D2C499BA100361DB8 /* ChangeObjectStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeObjectStateView.swift; sourceTree = "<group>"; };
+		E87ECA0F2C499C5400361DB8 /* gramophone.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gramophone.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +91,17 @@
 		E809D74C2C49885100DE8367 /* Implementacao_CursoAR_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E85C127C2C49B1ED00686372 /* hab.reality */,
+				E85C127B2C49B02400686372 /* LunarRover_English.reality */,
 				E809D74D2C49885100DE8367 /* AppDelegate.swift */,
 				E809D74F2C49885100DE8367 /* ContentView.swift */,
+				E87ECA0F2C499C5400361DB8 /* gramophone.usdz */,
+				E85C12812C4ADD8B00686372 /* IMG_2497.MOV */,
+				E85C12762C499FC800686372 /* fender_stratocaster.usdz */,
+				E85C129A2C4EFF0E00686372 /* 0a72ab1b-afcf-442b-9d35-d95c18dc8099.mov */,
 				E809D7512C49885300DE8367 /* Assets.xcassets */,
 				E809D7532C49885300DE8367 /* Preview Content */,
+				E87ECA082C4992B100361DB8 /* Pastviews */,
 			);
 			path = Implementacao_CursoAR_SwiftUI;
 			sourceTree = "<group>";
@@ -65,6 +112,36 @@
 				E809D7542C49885300DE8367 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E85C12972C4EF50700686372 /* Measure */ = {
+			isa = PBXGroup;
+			children = (
+				E85C12952C4EEE7500686372 /* MeasureCoordinator.swift */,
+				E85C12982C4EF51A00686372 /* MeasureView.swift */,
+			);
+			path = Measure;
+			sourceTree = "<group>";
+		};
+		E87ECA082C4992B100361DB8 /* Pastviews */ = {
+			isa = PBXGroup;
+			children = (
+				E85C12972C4EF50700686372 /* Measure */,
+				E87ECA062C49920100361DB8 /* FirstShapes.swift */,
+				E87ECA092C49957700361DB8 /* ChangeBoxColor.swift */,
+				E87ECA0B2C49992200361DB8 /* CreateABoxView.swift */,
+				E87ECA0D2C499BA100361DB8 /* ChangeObjectStateView.swift */,
+				E85C127D2C49B3F000686372 /* LoadModelsView.swift */,
+				E85C127F2C4ADCEE00686372 /* OcclusionView.swift */,
+				E85C12832C4B024700686372 /* JairoView.swift */,
+				E85C128B2C4C2A4700686372 /* TextureView.swift */,
+				E85C128D2C4DFA4400686372 /* GravityView.swift */,
+				E85C128F2C4E024700686372 /* CollisionColorChangeView.swift */,
+				E85C12912C4EE2B600686372 /* CollisionSystemView.swift */,
+				E85C12932C4EECE300686372 /* CoachingImplementation.swift */,
+				E85C129C2C4F177D00686372 /* LucasView.swift */,
+			);
+			path = Pastviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +202,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85C129B2C4EFF0E00686372 /* 0a72ab1b-afcf-442b-9d35-d95c18dc8099.mov in Resources */,
 				E809D7552C49885300DE8367 /* Preview Assets.xcassets in Resources */,
+				E87ECA102C499C5400361DB8 /* gramophone.usdz in Resources */,
+				E85C12822C4ADD8B00686372 /* IMG_2497.MOV in Resources */,
+				E85C12772C499FC800686372 /* fender_stratocaster.usdz in Resources */,
 				E809D7522C49885300DE8367 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +218,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85C12802C4ADCEE00686372 /* OcclusionView.swift in Sources */,
+				E85C12902C4E024700686372 /* CollisionColorChangeView.swift in Sources */,
+				E87ECA0C2C49992200361DB8 /* CreateABoxView.swift in Sources */,
+				E85C129D2C4F177D00686372 /* LucasView.swift in Sources */,
+				E87ECA0A2C49957700361DB8 /* ChangeBoxColor.swift in Sources */,
+				E87ECA072C49920100361DB8 /* FirstShapes.swift in Sources */,
+				E85C12962C4EEE7500686372 /* MeasureCoordinator.swift in Sources */,
 				E809D7502C49885100DE8367 /* ContentView.swift in Sources */,
 				E809D74E2C49885100DE8367 /* AppDelegate.swift in Sources */,
+				E85C12942C4EECE300686372 /* CoachingImplementation.swift in Sources */,
+				E85C12992C4EF51A00686372 /* MeasureView.swift in Sources */,
+				E85C128C2C4C2A4700686372 /* TextureView.swift in Sources */,
+				E87ECA0E2C499BA100361DB8 /* ChangeObjectStateView.swift in Sources */,
+				E85C127E2C49B3F000686372 /* LoadModelsView.swift in Sources */,
+				E85C128E2C4DFA4400686372 /* GravityView.swift in Sources */,
+				E85C12922C4EE2B600686372 /* CollisionSystemView.swift in Sources */,
+				E85C12842C4B024700686372 /* JairoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
