@@ -24,7 +24,7 @@ struct LucasViewContainer: UIViewRepresentable {
         let arView = ARView(frame: .zero)
         
         context.coordinator.arView = arView
-        context.coordinator.setUpUI2()
+        context.coordinator.setUpUI()
         
 //        arView.addCoachingOverlay()
         

@@ -21,8 +21,7 @@ struct ARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
-        arView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(context.coordinator.handleTap)))
-//
+
         context.coordinator.arView = arView
         context.coordinator.setUpUI()
         
@@ -42,58 +41,15 @@ struct ARViewContainer: UIViewRepresentable {
 
 class Coordinator {
     var arView: ARView?
-    var cancellable: AnyCancellable?
     
-    func setUpUI(){
+    func setUpUI() {
         
-        let anchor = AnchorEntity(plane: .horizontal)
+        let anchor = AnchorEntity(.image(group: "AR Resources", name: "0ww74zrj0y5fzwcktjrejhcar"))
         
-        let box1 = ModelEntity(
-            mesh: MeshResource.generateBox(size: 0.2),
-            materials: [UnlitMaterial(
-                color: .red)])
+        let sphere = ModelEntity(mesh: MeshResource.generateSphere(radius: 0.1), materials: [SimpleMaterial(color: .systemPink, roughness: 0.1, isMetallic: false)])
         
-        let box2 = ModelEntity(
-            mesh: MeshResource.generateBox(size: 0.2),
-            materials: [SimpleMaterial(
-                color: .red,
-                isMetallic: true
-            )])
-        box2.position.z = 0.3
-        
-        let box3 = ModelEntity(
-            mesh: MeshResource.generateBox(size: 0.2),
-            materials: [SimpleMaterial(
-                color: .red,
-                isMetallic: true
-            )])
-        box3.position.x = 0.3
-        
-        anchor.addChild(box1)
-        anchor.addChild(box2)
-        anchor.addChild(box3)
+        anchor.addChild(sphere)
         arView?.scene.addAnchor(anchor)
-    }
-    
-    @objc func handleTap(_ recognizer: UITapGestureRecognizer){
-        guard let arView = arView else { return }
         
-        let location = recognizer.location(in: arView)
-        let results = arView.raycast(from: location, allowing: .estimatedPlane, alignment: .horizontal)
-        
-        if let result = results.first {
-            
-            let anchor = AnchorEntity(raycastResult: result)
-            
-            let lightEntity = PointLight()
-            lightEntity.light.color = .yellow
-            lightEntity.light.intensity = 1000
-            lightEntity.light.attenuationRadius = 0.5
-            lightEntity.look(at: [0,0,0], from: [0,0,0.1], relativeTo: anchor)
-            
-            anchor.addChild(lightEntity)
-            arView.scene.addAnchor(anchor)
-            
-        }
     }
 }
