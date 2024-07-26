@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import RealityKit
+import SwiftUI
 
 class Graph {
     
@@ -13,10 +15,12 @@ class Graph {
     var nodes: [Node] = []
     var paths: [Edge] = []
     
+    var sceneAnchor: AnchorEntity?
+    
     //MARK: - Funções do grafo
     
     //Devolve os paths de um node
-    func getPaths(node: Node) -> [Edge]? {
+    private func getPaths(node: Node) -> [Edge]? {
         let edges = paths.filter({$0.firstNode == node || $0.secondNode == node})
         if !edges.isEmpty {
             return edges
@@ -25,18 +29,49 @@ class Graph {
         }
     }
     
+    private func addEdgeToSceneAnchor(edge: Edge) {
+        guard let anchor = sceneAnchor else { return }
+        
+        anchor.addChild(edge)
+    }
+    
+    private func addNodeToSceneAnchor(node: Node) {
+        guard let anchor = sceneAnchor else { return }
+        
+        anchor.addChild(node)
+    }
+    
+    private func addFirstNodeToSceneAnchor(node: Node) {
+        guard let anchor = sceneAnchor else { return }
+        node.position = .zero
+        
+        anchor.addChild(node)
+    }
+    
+    private func removeEdgeToSceneAnchor(edge: Edge) {
+        guard let anchor = sceneAnchor else { return }
+        
+        if anchor.children.contains(edge) {
+            anchor.removeChild(edge)
+        }
+    }
+    
+    //MARK: - Primeira interação
     //Adicionar primeiro node do grafo
-    func addFirstNode(id: UUID, type: SoundTypes) {
+    func addFirstNode(id: UUID, type: SoundTypes, position: SIMD3<Float>) {
         if nodes.isEmpty {
             let node = Node(id: id, type: type)
+            node.position = position
             nodes.append(node)
+            addFirstNodeToSceneAnchor(node: node)
+            
         } else {
             print("not first node")
         }
     }
     
     //Pesquisa um node no grafo
-    func getNode(id: UUID) -> Node?{
+    private func getNode(id: UUID) -> Node?{
         if let node = nodes.first(where: {$0.nodeId == id}) {
             return node
         } else {
@@ -45,7 +80,7 @@ class Graph {
     }
     
     //Retorna nodes desse tipo
-    func getNodes(type: SoundTypes) -> [Node]? {
+    private func getNodes(type: SoundTypes) -> [Node]? {
         let nodes = nodes.filter({$0.type == type})
         if !nodes.isEmpty{
             return nodes
@@ -55,7 +90,7 @@ class Graph {
     }
     
     //Verifica conexão
-    func verifyConnection(firstId: UUID, secondId: UUID) -> Bool{
+    private func verifyConnection(firstId: UUID, secondId: UUID) -> Bool{
         if self.paths.contains(where: {$0.firstNode.nodeId == firstId && $0.secondNode.nodeId == secondId}) {
             return true
         } else {
@@ -63,8 +98,9 @@ class Graph {
         }
     }
     
+    //MARK: - Adicionar node para o cena
     //Adicionar node no grafo
-    func addNodeToGraph(idToAdd: UUID, idToConnect: UUID, typeToAdd: SoundTypes) -> Bool {
+    func addNodeToGraph(idToAdd: UUID, idToConnect: UUID, typeToAdd: SoundTypes, position: SIMD3<Float>) -> Bool {
         if let nodeConnect = self.getNode(id: idToConnect){
             
             if let existence = self.getNode(id: idToAdd){
@@ -76,9 +112,14 @@ class Graph {
                 if nodeConnect.canConnect(){
                     
                     let nodeAdd = Node(id: idToAdd, type: typeToAdd)
+                    nodeAdd.position = position
+                    
+                    addNodeToSceneAnchor(node: nodeAdd)
                     
                     let edge = Edge(firstNode: nodeConnect, secondNode: nodeAdd)
                     let edgeBack = Edge(firstNode: nodeAdd, secondNode: nodeConnect)
+                    
+                    addEdgeToSceneAnchor(edge: edge)
                     
                     paths.append(edge)
                     paths.append(edgeBack)
@@ -140,6 +181,13 @@ class Graph {
         
         if firstNode.connections != 2 && secondNode.connections != 2 {
             
+            if let edge = paths.first(where: {($0.firstNode == firstNode && $0.secondNode == secondNode) || ($0.firstNode == secondNode && $0.secondNode == firstNode)}){
+                removeEdgeToSceneAnchor(edge: edge)
+            }
+            if let edgeBack = paths.last(where: {($0.firstNode == firstNode && $0.secondNode == secondNode) || ($0.firstNode == secondNode && $0.secondNode == firstNode)}){
+                removeEdgeToSceneAnchor(edge: edgeBack)
+            }
+            
             paths.removeAll(where: {($0.firstNode == firstNode && $0.secondNode == secondNode) || ($0.firstNode == secondNode && $0.secondNode == firstNode)})
             
             firstNode.addConnection()
@@ -152,7 +200,7 @@ class Graph {
     }
     
     //Pega o próximo node da sequencia
-    func searchNext(actualNode: Node, sequence: [SoundTypes], sequenceIndex: Int, visitedNodes: [Node] ) -> [Node]? {
+    private func searchNext(actualNode: Node, sequence: [SoundTypes], sequenceIndex: Int, visitedNodes: [Node] ) -> [Node]? {
         
         if sequenceIndex >= sequence.count {
             return [actualNode]
@@ -177,6 +225,7 @@ class Graph {
         return nil
     }
     
+    #warning("Nao usar por enquanto")
     //Busca a sequencia
     func search(objectiveSequence: [SoundTypes]) -> [Node]? {
         

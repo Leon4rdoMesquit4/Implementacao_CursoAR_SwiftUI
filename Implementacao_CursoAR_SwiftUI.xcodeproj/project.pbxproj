@@ -11,6 +11,14 @@
 		E809D7502C49885100DE8367 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E809D74F2C49885100DE8367 /* ContentView.swift */; };
 		E809D7522C49885300DE8367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E809D7512C49885300DE8367 /* Assets.xcassets */; };
 		E809D7552C49885300DE8367 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E809D7542C49885300DE8367 /* Preview Assets.xcassets */; };
+		E814A7912C52CF2000AC37A2 /* esfera.dae in Resources */ = {isa = PBXBuildFile; fileRef = E814A78F2C52CF2000AC37A2 /* esfera.dae */; };
+		E814A7922C52CF2000AC37A2 /* esferaleo.usdc in Resources */ = {isa = PBXBuildFile; fileRef = E814A7902C52CF2000AC37A2 /* esferaleo.usdc */; };
+		E814A7962C52D90800AC37A2 /* esferaleo.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E814A7952C52D90800AC37A2 /* esferaleo.usdz */; };
+		E814A7982C52EDB900AC37A2 /* esferaleo2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E814A7972C52EDB900AC37A2 /* esferaleo2.usdz */; };
+		E814A79E2C534D6D00AC37A2 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814A7992C534D6D00AC37A2 /* Graph.swift */; };
+		E814A79F2C534D6D00AC37A2 /* GraphModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814A79A2C534D6D00AC37A2 /* GraphModels.swift */; };
+		E814A7A02C534D6D00AC37A2 /* GraphARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814A79C2C534D6D00AC37A2 /* GraphARView.swift */; };
+		E814A7A22C53552400AC37A2 /* Point3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814A7A12C53552400AC37A2 /* Point3D.swift */; };
 		E85C12772C499FC800686372 /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E85C12762C499FC800686372 /* fender_stratocaster.usdz */; };
 		E85C127E2C49B3F000686372 /* LoadModelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C127D2C49B3F000686372 /* LoadModelsView.swift */; };
 		E85C12802C4ADCEE00686372 /* OcclusionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C127F2C4ADCEE00686372 /* OcclusionView.swift */; };
@@ -38,6 +46,14 @@
 		E809D74F2C49885100DE8367 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E809D7512C49885300DE8367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E809D7542C49885300DE8367 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E814A78F2C52CF2000AC37A2 /* esfera.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = esfera.dae; sourceTree = "<group>"; };
+		E814A7902C52CF2000AC37A2 /* esferaleo.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = esferaleo.usdc; sourceTree = "<group>"; };
+		E814A7952C52D90800AC37A2 /* esferaleo.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = esferaleo.usdz; sourceTree = "<group>"; };
+		E814A7972C52EDB900AC37A2 /* esferaleo2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = esferaleo2.usdz; sourceTree = "<group>"; };
+		E814A7992C534D6D00AC37A2 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		E814A79A2C534D6D00AC37A2 /* GraphModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphModels.swift; sourceTree = "<group>"; };
+		E814A79C2C534D6D00AC37A2 /* GraphARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphARView.swift; sourceTree = "<group>"; };
+		E814A7A12C53552400AC37A2 /* Point3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point3D.swift; sourceTree = "<group>"; };
 		E85C12762C499FC800686372 /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fender_stratocaster.usdz; sourceTree = "<group>"; };
 		E85C127B2C49B02400686372 /* LunarRover_English.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = LunarRover_English.reality; sourceTree = "<group>"; };
 		E85C127C2C49B1ED00686372 /* hab.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = hab.reality; sourceTree = "<group>"; };
@@ -91,14 +107,19 @@
 		E809D74C2C49885100DE8367 /* Implementacao_CursoAR_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E814A79D2C534D6D00AC37A2 /* Util */,
 				E85C127C2C49B1ED00686372 /* hab.reality */,
 				E85C127B2C49B02400686372 /* LunarRover_English.reality */,
 				E809D74D2C49885100DE8367 /* AppDelegate.swift */,
 				E809D74F2C49885100DE8367 /* ContentView.swift */,
 				E87ECA0F2C499C5400361DB8 /* gramophone.usdz */,
 				E85C12812C4ADD8B00686372 /* IMG_2497.MOV */,
+				E814A7952C52D90800AC37A2 /* esferaleo.usdz */,
 				E85C12762C499FC800686372 /* fender_stratocaster.usdz */,
+				E814A7972C52EDB900AC37A2 /* esferaleo2.usdz */,
 				E85C129A2C4EFF0E00686372 /* 0a72ab1b-afcf-442b-9d35-d95c18dc8099.mov */,
+				E814A78F2C52CF2000AC37A2 /* esfera.dae */,
+				E814A7902C52CF2000AC37A2 /* esferaleo.usdc */,
 				E809D7512C49885300DE8367 /* Assets.xcassets */,
 				E809D7532C49885300DE8367 /* Preview Content */,
 				E87ECA082C4992B100361DB8 /* Pastviews */,
@@ -112,6 +133,25 @@
 				E809D7542C49885300DE8367 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E814A79B2C534D6D00AC37A2 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				E814A7992C534D6D00AC37A2 /* Graph.swift */,
+				E814A79A2C534D6D00AC37A2 /* GraphModels.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		E814A79D2C534D6D00AC37A2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E814A79B2C534D6D00AC37A2 /* Graph */,
+				E814A79C2C534D6D00AC37A2 /* GraphARView.swift */,
+				E814A7A12C53552400AC37A2 /* Point3D.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		E85C12972C4EF50700686372 /* Measure */ = {
@@ -203,10 +243,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E85C129B2C4EFF0E00686372 /* 0a72ab1b-afcf-442b-9d35-d95c18dc8099.mov in Resources */,
+				E814A7922C52CF2000AC37A2 /* esferaleo.usdc in Resources */,
 				E809D7552C49885300DE8367 /* Preview Assets.xcassets in Resources */,
+				E814A7982C52EDB900AC37A2 /* esferaleo2.usdz in Resources */,
 				E87ECA102C499C5400361DB8 /* gramophone.usdz in Resources */,
 				E85C12822C4ADD8B00686372 /* IMG_2497.MOV in Resources */,
+				E814A7962C52D90800AC37A2 /* esferaleo.usdz in Resources */,
 				E85C12772C499FC800686372 /* fender_stratocaster.usdz in Resources */,
+				E814A7912C52CF2000AC37A2 /* esfera.dae in Resources */,
 				E809D7522C49885300DE8367 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,12 +268,16 @@
 				E85C129D2C4F177D00686372 /* LucasView.swift in Sources */,
 				E87ECA0A2C49957700361DB8 /* ChangeBoxColor.swift in Sources */,
 				E87ECA072C49920100361DB8 /* FirstShapes.swift in Sources */,
+				E814A7A22C53552400AC37A2 /* Point3D.swift in Sources */,
+				E814A79E2C534D6D00AC37A2 /* Graph.swift in Sources */,
 				E85C12962C4EEE7500686372 /* MeasureCoordinator.swift in Sources */,
+				E814A7A02C534D6D00AC37A2 /* GraphARView.swift in Sources */,
 				E809D7502C49885100DE8367 /* ContentView.swift in Sources */,
 				E809D74E2C49885100DE8367 /* AppDelegate.swift in Sources */,
 				E85C12942C4EECE300686372 /* CoachingImplementation.swift in Sources */,
 				E85C12992C4EF51A00686372 /* MeasureView.swift in Sources */,
 				E85C128C2C4C2A4700686372 /* TextureView.swift in Sources */,
+				E814A79F2C534D6D00AC37A2 /* GraphModels.swift in Sources */,
 				E87ECA0E2C499BA100361DB8 /* ChangeObjectStateView.swift in Sources */,
 				E85C127E2C49B3F000686372 /* LoadModelsView.swift in Sources */,
 				E85C128E2C4DFA4400686372 /* GravityView.swift in Sources */,
