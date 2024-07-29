@@ -6,14 +6,60 @@
 //
 
 import RealityKit
-import Foundation
+import SwiftUI
 
 //Tipos de sons
-enum SoundTypes {
-    case square
+enum SoundTypes: CaseIterable {
+    case square  
     case triangle
     case star
     case moon
+
+    //APENAS PARA TESTES
+    var color: Color{
+        switch self {
+        case .square:
+            .purple
+        case .triangle:
+            .green
+        case .star:
+            .red
+        case .moon:
+            .blue
+        }
+    }
+    
+    //APENAS PARA TESTES
+    var uicolor: UIColor {
+        switch self {
+        case .square:
+            .purple
+        case .triangle:
+            .green
+        case .star:
+            .red
+        case .moon:
+            .blue
+        }
+    }
+    
+    //APENAS PARA TESTES
+    var image: String {
+        switch self {
+        case .square:
+            "square.fill"
+        case .triangle:
+            "triangleshape.fill"
+        case .star:
+            "star.fill"
+        case .moon:
+            "moon.fill"
+        }
+    }
+    
+    var id: UUID{
+        return UUID()
+    }
 }
 
 //Struct base que representa o node
@@ -47,7 +93,7 @@ class Node: Entity, HasModel, HasCollision {
     }
     
     func createArNode(){
-        let sphere1 = ModelComponent(mesh: MeshResource.generateSphere(radius: 0.1), materials: [SimpleMaterial(color: .systemPink, roughness: 0.1, isMetallic: false)])
+        let sphere1 = ModelComponent(mesh: MeshResource.generateSphere(radius: 0.1), materials: [SimpleMaterial(color: type.uicolor, roughness: 0.1, isMetallic: false)])
         self.model = sphere1
     }
     
@@ -101,7 +147,6 @@ class Edge: Entity, HasModel, HasCollision {
         super.init()   
         
         let distance = simd_distance(firstNode.position, secondNode.position)
-        
         
         createArNode(distance: distance)
         changeDirectionAndRotation()

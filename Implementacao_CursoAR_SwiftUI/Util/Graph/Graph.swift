@@ -41,13 +41,6 @@ class Graph {
         anchor.addChild(node)
     }
     
-    private func addFirstNodeToSceneAnchor(node: Node) {
-        guard let anchor = sceneAnchor else { return }
-        node.position = .zero
-        
-        anchor.addChild(node)
-    }
-    
     private func removeEdgeToSceneAnchor(edge: Edge) {
         guard let anchor = sceneAnchor else { return }
         
@@ -63,7 +56,7 @@ class Graph {
             let node = Node(id: id, type: type)
             node.position = position
             nodes.append(node)
-            addFirstNodeToSceneAnchor(node: node)
+            addNodeToSceneAnchor(node: node)
             
         } else {
             print("not first node")
@@ -160,6 +153,8 @@ class Graph {
             let edge = Edge(firstNode: firstNode, secondNode: secondNode)
             let edgeBack = Edge(firstNode: secondNode, secondNode: firstNode)
             
+            addEdgeToSceneAnchor(edge: edge)
+            
             paths.append(edge)
             paths.append(edgeBack)
             
@@ -225,13 +220,12 @@ class Graph {
         return nil
     }
     
-    #warning("Nao usar por enquanto")
     //Busca a sequencia
     func search(objectiveSequence: [SoundTypes]) -> [Node]? {
         
         guard let nodesToStart = self.getNodes(type: objectiveSequence.first!) else { return nil }
         
-        for node in nodesToStart{
+        for node in nodesToStart {
             if let sequence = self.searchNext(actualNode: node, sequence: objectiveSequence, sequenceIndex: 1, visitedNodes: []) {
                 return sequence
             }

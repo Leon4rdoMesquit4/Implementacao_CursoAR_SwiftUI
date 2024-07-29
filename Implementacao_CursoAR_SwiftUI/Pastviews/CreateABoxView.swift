@@ -9,11 +9,15 @@ import ARKit
 import RealityKit
 import SwiftUI
 
-struct CreateABoxView : View {
-    var body: some View {
-        ARViewContainer().edgesIgnoringSafeArea(.all)
-    }
-}
+//struct CreateABoxView : View {
+//    
+//    @State var state: GameState
+//    @State var nodeSoundType: SoundTypes
+//    
+//    var body: some View {
+//        ARViewContainer(state: $state, nodeSoundType: $nodeSoundType).edgesIgnoringSafeArea(.all)
+//    }
+//}
 
 struct CreateABox: UIViewRepresentable {
     
